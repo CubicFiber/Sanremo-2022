@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ page import="java.util.ArrayList" %>    
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="Cantanti.Singer" %>
 
 <!DOCTYPE html>
 <html>
@@ -16,41 +17,77 @@
 		
 		<%
 			
-			//array list per nomi
+			Singer achillelauro = new Singer("img/achille_lauro.jfif", "Achille Lauro", 0, 0);
+			Singer akaseven = new Singer("img/aka_seven.jfif", "Aka Seven", 0, 0);
+			Singer anamena = new Singer("img/ana_mena.jfif", "Ana Mena", 0, 0);
+			Singer dargendamico = new Singer("img/dargen_damico.jfif", "Darge D'Amico", 0, 0);
+			Singer ditonellapiagaerettore = new Singer("img/ditonellapiaga_rettore.jfif", "Dito Nella Piaga e Rettore", 0, 0);
+			Singer elisa = new Singer("img/elisa.jfif", "Elisa", 0, 0);
+			Singer emma = new Singer("img/emma.jfif", "Emma", 0, 0);
+			Singer fabriziomoro = new Singer("img/fabrizio_moro.jfif", "Fabrizio Moro", 0, 0);
+			Singer giannimorandi = new Singer("img/gianni_morandi.jfif", "Gianni Morandi", 0, 0);
+			Singer giovannitruppi = new Singer("img/giovanni_truppi.jfif", "Giovanni Truppi", 0, 0);
+			Singer giusyferreri = new Singer("img/giusy_ferreri.jfif", "Giusy Ferreri", 0, 0);
+			Singer highsnobehu = new Singer("img/highsnob_hu.jfif", "Highsnob e Hu", 0, 0);
+			Singer irama = new Singer("img/irama.jfif", "Irama", 0, 0);
+			Singer ivazanicchi = new Singer("img/iva_zanicchi.jfif", "Iva Zanicchi", 0, 0);
+			Singer larappresentantedilista = new Singer("img/la_rappresentante_di_lista.jfif", "La Rappresentante Di Lista", 0, 0);
+			Singer levibrazioni = new Singer("img/le_vibrazioni.jfif", "Le Vibrazioni", 0, 0);
+			Singer mahmoodeblanco = new Singer("img/mahmood_blanco.jfif", "Mahmood e Blanco", 0, 0);
+			Singer massimoranieri = new Singer("img/massimo_ranieri.jfif", "Massimo Ranieri", 0, 0);
+			Singer michelebravi = new Singer("img/michele_bravi.jfif", "Michele Bravi", 0, 0);
+			Singer noemi = new Singer("img/noemi.jfif", "Noemi", 0, 0);
+			Singer rkomi = new Singer("img/rkomi.jfif", "Rkomi", 0, 0);
+			Singer sangiovanni = new Singer("img/sangiovanni.jfif", "Sangiovanni", 0, 0);
 			
-			//array list per voti positivi e negativi
+			ArrayList<Singer> cantanti = new ArrayList<Singer>();
 			
-			ArrayList<String> images = new ArrayList<String>();
-			images.add("achille_lauro.jfif");images.add("aka_seven.jfif");images.add("ana_mena.jfif");images.add("dargen_damico.jfif");images.add("ditonellapiaga_rettore.jfif");images.add("elisa.jfif");images.add("emma.jfif");images.add("fabrizio_moro.jfif");images.add("gianni_morandi.jfif");images.add("giovanni_truppi.jfif");images.add("giusy_ferreri.jfif");images.add("highsnob_hu.jfif");images.add("irama.jfif");images.add("iva_zanicchi.jfif");images.add("la_rappresentante_di_lista.jfif");images.add("le_vibrazioni.jfif");images.add("mahmood_blanco.jfif");images.add("massimo_ranieri.jfif");images.add("michele_bravi.jfif");images.add("noemi.jfif");images.add("rkomi.jfif");images.add("sangiovanni.jfif");
-			
-			ArrayList<String> singers = new ArrayList<String>();
-			singers.add("Achille Lauro");singers.add("Aka 7even");singers.add("Ana Mena");singers.add("Dargen D'Amico");singers.add("Ditonellapiaga e Rettore");singers.add("Elisa");singers.add("Emma");singers.add("Fabrizio Moro");singers.add("Gianni Morandi");singers.add("Giovanni Truppi");singers.add("Giusy Ferreri");singers.add("Highsnob e Hu");singers.add("Irama");singers.add("Iva Zanicchi");singers.add("La rappresentantedi lista");singers.add("Le Vibrazioni");singers.add("Mahmood e Blanco");singers.add("Massimo Ranieri");singers.add("Michele Bravi");singers.add("Noemi");singers.add("Rkomi");singers.add("Sangiovanni");
+			cantanti.add(achillelauro);
+			cantanti.add(akaseven);
+			cantanti.add(anamena);
+			cantanti.add(dargendamico);
+			cantanti.add(ditonellapiagaerettore);
+			cantanti.add(elisa);
+			cantanti.add(emma);
+			cantanti.add(fabriziomoro);
+			cantanti.add(giannimorandi);
+			cantanti.add(giovannitruppi);
+			cantanti.add(giusyferreri);
+			cantanti.add(highsnobehu);
+			cantanti.add(irama);
+			cantanti.add(ivazanicchi);
+			cantanti.add(larappresentantedilista);
+			cantanti.add(levibrazioni);
+			cantanti.add(mahmoodeblanco);
+			cantanti.add(massimoranieri);
+			cantanti.add(michelebravi);
+			cantanti.add(noemi);
+			cantanti.add(rkomi);
+			cantanti.add(sangiovanni);
 			
 		%>
 		
 	</head>
 	<body style="font-family: 'Spartan', sans-serif">
 	
-		<div class="container">
+		<div class="container ">
 			<div class="row">
 				<div class="col">
 					<div class="card" style="width: 18rem;">
-					  <img src="<%= images.get(1) %>" class="card-img-top" alt="...">
+					  <img src="<%= achillelauro.getImg() %>" class="card-img-top" alt="...">
 					  <div class="card-body">
-					    <h5 class="card-title">Card title</h5>
-					    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-					    <a href="#" class="btn btn-primary">Go somewhere</a>
+					    <h5 class="card-title"><%= sangiovanni.getNome() %></h5>
+					    <a href="#" class="btn btn-primary">Vota</a>
 					  </div>
 					</div>
 				</div>
 				
 				<div class="col">
 					<div class="card" style="width: 18rem;">
-					  <img src="aka_seven.jfif" class="card-img-top" alt="...">
+					  <img src="<%= akaseven.getImg() %>" class="card-img-top" alt="...">
 					  <div class="card-body">
-					    <h5 class="card-title">Card title</h5>
-					    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-					    <a href="#" class="btn btn-primary">Go somewhere</a>
+					    <h5 class="card-title"><%= sangiovanni.getNome() %></h5>
+					    <a href="#" class="btn btn-primary">Vota</a>
 					  </div>
 					</div>
 				</div>
@@ -59,22 +96,20 @@
 			<div class="row">
 				<div class="col">
 					<div class="card" style="width: 18rem;">
-					  <img src="ana_mena.jfif" class="card-img-top" alt="...">
+					  <img src="<%= anamena.getImg() %>" class="card-img-top" alt="...">
 					  <div class="card-body">
-					    <h5 class="card-title">Card title</h5>
-					    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-					    <a href="#" class="btn btn-primary">Go somewhere</a>
+					    <h5 class="card-title"><%= sangiovanni.getNome() %></h5>
+					    <a href="#" class="btn btn-primary">Vota</a>
 					  </div>
 					</div>
 				</div>
 				
 				<div class="col">
 					<div class="card" style="width: 18rem;">
-					  <img src="dargen_damico.jfif" class="card-img-top" alt="...">
+					  <img src="<%= dargendamico.getImg() %>" class="card-img-top" alt="...">
 					  <div class="card-body">
-					    <h5 class="card-title">Card title</h5>
-					    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-					    <a href="#" class="btn btn-primary">Go somewhere</a>
+					    <h5 class="card-title"><%= sangiovanni.getNome() %></h5>
+					    <a href="#" class="btn btn-primary">Vota</a>
 					  </div>
 					</div>
 				</div>
@@ -83,22 +118,20 @@
 			<div class="row">
 				<div class="col">
 					<div class="card" style="width: 18rem;">
-					  <img src="ditonellapiaga" class="card-img-top" alt="...">
+					  <img src="<%= ditonellapiagaerettore.getImg() %>" class="card-img-top" alt="...">
 					  <div class="card-body">
-					    <h5 class="card-title">Card title</h5>
-					    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-					    <a href="#" class="btn btn-primary">Go somewhere</a>
+					    <h5 class="card-title"><%= sangiovanni.getNome() %></h5>
+					    <a href="#" class="btn btn-primary">Vota</a>
 					  </div>
 					</div>
 				</div>
 				
 				<div class="col">
 					<div class="card" style="width: 18rem;">
-					  <img src="..." class="card-img-top" alt="...">
+					  <img src="<%= elisa.getImg() %>" class="card-img-top" alt="...">
 					  <div class="card-body">
-					    <h5 class="card-title">Card title</h5>
-					    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-					    <a href="#" class="btn btn-primary">Go somewhere</a>
+					    <h5 class="card-title"><%= sangiovanni.getNome() %></h5>
+					    <a href="#" class="btn btn-primary">Vota</a>
 					  </div>
 					</div>
 				</div>
@@ -107,22 +140,20 @@
 			<div class="row">
 				<div class="col">
 					<div class="card" style="width: 18rem;">
-					  <img src="..." class="card-img-top" alt="...">
+					  <img src="<%= emma.getImg() %>" class="card-img-top" alt="...">
 					  <div class="card-body">
-					    <h5 class="card-title">Card title</h5>
-					    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-					    <a href="#" class="btn btn-primary">Go somewhere</a>
+					    <h5 class="card-title"><%= sangiovanni.getNome() %></h5>
+					    <a href="#" class="btn btn-primary">Vota</a>
 					  </div>
 					</div>
 				</div>
 				
 				<div class="col">
 					<div class="card" style="width: 18rem;">
-					  <img src="..." class="card-img-top" alt="...">
+					  <img src="<%= fabriziomoro.getImg() %>" class="card-img-top" alt="...">
 					  <div class="card-body">
-					    <h5 class="card-title">Card title</h5>
-					    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-					    <a href="#" class="btn btn-primary">Go somewhere</a>
+					    <h5 class="card-title"><%= sangiovanni.getNome() %></h5>
+					    <a href="#" class="btn btn-primary">Vota</a>
 					  </div>
 					</div>
 				</div>
@@ -131,22 +162,20 @@
 			<div class="row">
 				<div class="col">
 					<div class="card" style="width: 18rem;">
-					  <img src="..." class="card-img-top" alt="...">
+					  <img src="<%= giannimorandi.getImg() %>" class="card-img-top" alt="...">
 					  <div class="card-body">
 					    <h5 class="card-title">Card title</h5>
-					    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-					    <a href="#" class="btn btn-primary">Go somewhere</a>
+					    <a href="#" class="btn btn-primary">Vota</a>
 					  </div>
 					</div>
 				</div>
 				
 				<div class="col">
 					<div class="card" style="width: 18rem;">
-					  <img src="..." class="card-img-top" alt="...">
+					  <img src="<%= giovannitruppi.getImg() %>" class="card-img-top" alt="...">
 					  <div class="card-body">
 					    <h5 class="card-title">Card title</h5>
-					    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-					    <a href="#" class="btn btn-primary">Go somewhere</a>
+					    <a href="#" class="btn btn-primary">Vota</a>
 					  </div>
 					</div>
 				</div>
@@ -155,22 +184,20 @@
 			<div class="row">
 				<div class="col">
 					<div class="card" style="width: 18rem;">
-					  <img src="..." class="card-img-top" alt="...">
+					  <img src="<%= giusyferreri.getImg() %>" class="card-img-top" alt="...">
 					  <div class="card-body">
 					    <h5 class="card-title">Card title</h5>
-					    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-					    <a href="#" class="btn btn-primary">Go somewhere</a>
+					    <a href="#" class="btn btn-primary">Vota</a>
 					  </div>
 					</div>
 				</div>
 				
 				<div class="col">
 					<div class="card" style="width: 18rem;">
-					  <img src="..." class="card-img-top" alt="...">
+					  <img src="<%= highsnobehu.getImg() %>" class="card-img-top" alt="...">
 					  <div class="card-body">
-					    <h5 class="card-title">Card title</h5>
-					    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-					    <a href="#" class="btn btn-primary">Go somewhere</a>
+					    <h5 class="card-title"><%= sangiovanni.getNome() %></h5>
+					    <a href="#" class="btn btn-primary">Vota</a>
 					  </div>
 					</div>
 				</div>
@@ -179,22 +206,20 @@
 			<div class="row">
 				<div class="col">
 					<div class="card" style="width: 18rem;">
-					  <img src="..." class="card-img-top" alt="...">
+					  <img src="<%= irama.getImg() %>" class="card-img-top" alt="...">
 					  <div class="card-body">
-					    <h5 class="card-title">Card title</h5>
-					    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-					    <a href="#" class="btn btn-primary">Go somewhere</a>
+					    <h5 class="card-title"><%= sangiovanni.getNome() %></h5>
+					    <a href="#" class="btn btn-primary">Vota</a>
 					  </div>
 					</div>
 				</div>
 				
 				<div class="col">
 					<div class="card" style="width: 18rem;">
-					  <img src="..." class="card-img-top" alt="...">
+					  <img src="<%= ivazanicchi.getImg() %>" class="card-img-top" alt="">
 					  <div class="card-body">
-					    <h5 class="card-title">Card title</h5>
-					    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-					    <a href="#" class="btn btn-primary">Go somewhere</a>
+					    <h5 class="card-title"><%= sangiovanni.getNome() %></h5>
+					    <a href="#" class="btn btn-primary">Vota</a>
 					  </div>
 					</div>
 				</div>
@@ -203,22 +228,20 @@
 			<div class="row">
 				<div class="col">
 					<div class="card" style="width: 18rem;">
-					  <img src="..." class="card-img-top" alt="...">
+					  <img src="<%= larappresentantedilista.getImg() %>" class="card-img-top" alt="...">
 					  <div class="card-body">
-					    <h5 class="card-title">Card title</h5>
-					    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-					    <a href="#" class="btn btn-primary">Go somewhere</a>
+					    <h5 class="card-title"><%= sangiovanni.getNome() %></h5>
+					    <a href="#" class="btn btn-primary">Vota</a>
 					  </div>
 					</div>
 				</div>
 				
 				<div class="col">
 					<div class="card" style="width: 18rem;">
-					  <img src="..." class="card-img-top" alt="...">
+					  <img src="<%= levibrazioni.getImg() %>" class="card-img-top" alt="...">
 					  <div class="card-body">
-					    <h5 class="card-title">Card title</h5>
-					    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-					    <a href="#" class="btn btn-primary">Go somewhere</a>
+					    <h5 class="card-title"><%= sangiovanni.getNome() %></h5>
+					    <a href="#" class="btn btn-primary">Vota</a>
 					  </div>
 					</div>
 				</div>
@@ -227,22 +250,20 @@
 			<div class="row">
 				<div class="col">
 					<div class="card" style="width: 18rem;">
-					  <img src="..." class="card-img-top" alt="...">
+					  <img src="<%= mahmoodeblanco.getImg() %>" class="card-img-top" alt="...">
 					  <div class="card-body">
-					    <h5 class="card-title">Card title</h5>
-					    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-					    <a href="#" class="btn btn-primary">Go somewhere</a>
+					    <h5 class="card-title"><%= sangiovanni.getNome() %></h5>
+					    <a href="#" class="btn btn-primary">Vota</a>
 					  </div>
 					</div>
 				</div>
 				
 				<div class="col">
 					<div class="card" style="width: 18rem;">
-					  <img src="..." class="card-img-top" alt="...">
+					  <img src="<%= massimoranieri.getImg() %>" class="card-img-top" alt="...">
 					  <div class="card-body">
-					    <h5 class="card-title">Card title</h5>
-					    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-					    <a href="#" class="btn btn-primary">Go somewhere</a>
+					    <h5 class="card-title"><%= sangiovanni.getNome() %></h5>
+					    <a href="#" class="btn btn-primary">Vota</a>
 					  </div>
 					</div>
 				</div>
@@ -251,22 +272,42 @@
 			<div class="row">
 				<div class="col">
 					<div class="card" style="width: 18rem;">
-					  <img src="..." class="card-img-top" alt="...">
+					  <img src="<%= michelebravi.getImg() %>" class="card-img-top" alt="...">
 					  <div class="card-body">
-					    <h5 class="card-title">Card title</h5>
-					    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-					    <a href="#" class="btn btn-primary">Go somewhere</a>
+					    <h5 class="card-title"><%= sangiovanni.getNome() %></h5>
+					    <a href="#" class="btn btn-primary">Vota</a>
 					  </div>
 					</div>
 				</div>
 				
 				<div class="col">
 					<div class="card" style="width: 18rem;">
-					  <img src="..." class="card-img-top" alt="...">
+					  <img src="<%= noemi.getImg() %>" class="card-img-top" alt="...">
 					  <div class="card-body">
-					    <h5 class="card-title">Card title</h5>
-					    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-					    <a href="#" class="btn btn-primary">Go somewhere</a>
+					    <h5 class="card-title"><%= sangiovanni.getNome() %></h5>
+					    <a href="#" class="btn btn-primary">Vota</a>
+					  </div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col">
+					<div class="card" style="width: 18rem;">
+					  <img src="<%= rkomi.getImg() %>" class="card-img-top" alt="...">
+					  <div class="card-body">
+					    <h5 class="card-title"><%= sangiovanni.getNome() %></h5>
+					    <a href="#" class="btn btn-primary">Vota</a>
+					  </div>
+					</div>
+				</div>
+				
+				<div class="col">
+					<div class="card" style="width: 18rem;">
+					  <img src="<%= sangiovanni.getImg() %>" class="card-img-top" alt="...">
+					  <div class="card-body">
+					    <h5 class="card-title"><%= sangiovanni.getNome() %></h5>
+					    <a href="#" class="btn btn-primary">Vota</a>
 					  </div>
 					</div>
 				</div>
