@@ -11,35 +11,38 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+		<style>
+			header{
+				color: white;
+				background-color:blue;
+				text-align:center;
+				font-size:100px;
+			}
+		</style>
 		<%
 		
 			ArrayList<Singer> cantanti = (ArrayList<Singer>)session.getAttribute("cantanti");
+			int i = Integer.valueOf(request.getParameter("indice")).intValue();
 			session.setAttribute("token", "true");
-			
-			String cantante = request.getParameter("nome");
 		
 		%>
 	</head>
-	<body>
-	
-	<h5><%= cantante %></h5>
-	
-		<%
+	<body style="font-family: 'Spartan', sans-serif">
 		
-			Singer temp;
 		
-			switch (cantante){
-			
-				case "Achille Lauro":
-					temp = cantanti.get(0);
-					
-					break;
-			}
+		<header>Sanremo 2022</header><br><br>
 		
-		%>
-	
-		<a href="?voto=positivo&nome=<%= cantante %>">SI</a>
-		<a href="?voto=negativo&nome=<%= cantante %>">NO</a>
+		<center><div class="card shadow-lg" height="200" style="width:300px">
+			<img src="<%= cantanti.get(i).getImg() %>" class="card-img-top">
+			<div class="card-body">
+				<h5 class="card-title"><%= cantanti.get(i).getNome() %></h5>
+				<div class="row">
+					<div class="col"><a class="btn btn-success" href="confermaVoto.jsp?voto=positivo&indice=<%= i %>"><i class="bi bi-heart-fill"></i></a></div>
+					<div class="col"><a class="btn btn-danger" href="confermaVoto.jsp?voto=negativo&indice=<%= i %>"><i class="bi bi-heartbreak-fill"></i></a></div>
+				</div>
+  			</div>
+		</div></center>
 	
 	</body>
 </html>

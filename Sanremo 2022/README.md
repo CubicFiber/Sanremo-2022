@@ -1,2 +1,0 @@
-Continuare le card inserendo un href per ogni voto (Si o No).
-Cliccando sull' href si viene reindirizzati su una seconda pagina dove viene preso il paramtro, viene controllato con uno switch case. Se il voto è positvo viene incrementato l'attributo nell'oggetto

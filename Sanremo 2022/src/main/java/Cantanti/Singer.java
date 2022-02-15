@@ -3,49 +3,49 @@ import java.util.ArrayList;
 
 public class Singer {
 
-	String img;
-	String nome;
-	int positivi;
-	int negativi;
+	String Img;
+	String Nome;
+	int Positivi;
+	int Negativi;
 	
-	public Singer(String img, String nome, int positivi, int negativi) {
+	public Singer(String Img, String Nome, int Positivi, int Negativi) {
 		super();
-		this.img = img;
-		this.nome = nome;
-		this.positivi = positivi;
-		this.negativi = negativi;
+		this.Img = Img;
+		this.Nome = Nome;
+		this.Positivi = Positivi;
+		this.Negativi = Negativi;
 	}
 
 	public String getImg() {
-		return img;
+		return Img;
 	}
 
-	public void setImg(String img) {
-		this.img = img;
+	public void setImg(String Img) {
+		this.Img = Img;
 	}
 
 	public String getNome() {
-		return nome;
+		return Nome;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setNome(String Nome) {
+		this.Nome = Nome;
 	}
 
 	public int getPositivi() {
-		return positivi;
+		return Positivi;
 	}
 
-	public void setPositivi(int positivi) {
-		this.positivi = positivi;
+	public void setPositivi(int Positivi) {
+		this.Positivi = Positivi;
 	}
 
 	public int getNegativi() {
-		return negativi;
+		return Negativi;
 	}
 
-	public void setNegativi(int negativi) {
-		this.negativi = negativi;
+	public void setNegativi(int Negativi) {
+		this.Negativi = Negativi;
 	}
 	
 }
