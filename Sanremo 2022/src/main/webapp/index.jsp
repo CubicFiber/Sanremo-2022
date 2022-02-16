@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ page import="java.util.ArrayList" %>
+<%@ page import="java.util.HashMap" %>
+<%@ page import="java.util.Locale" %>
 <%@ page import="Cantanti.Singer" %>
 
 <!DOCTYPE html>
@@ -27,6 +29,23 @@
 		
 		
 		<%
+		
+			String language = String.valueOf(session.getAttribute("language"));
+			String country = String.valueOf(session.getAttribute("country"));
+			
+			HashMap<String, String> lingua = new HashMap<String, String>();
+			
+			lingua.put("italiano", "vota ora");
+			lingua.put("english", "vote now");
+			
+			String chiave = "";
+			
+			if(country.equals("IT")) {
+				chiave = "italiano";
+			} else {
+				chiave = "english";
+			}
+		
 		 	ArrayList<Singer> cantanti = (ArrayList<Singer>)session.getAttribute("cantanti");
 			int i=0;
 			int j=0;
@@ -51,7 +70,7 @@
 							    	<div class="col"><h6 class="card-text" style="color: red"><%= cantanti.get(i).getNegativi() %></h6></div>
 							    </div>
 							    <br>
-							    <a href="voto.jsp?nome=<%= cantanti.get(i).getNome() %>&indice=<%=i %>" class="btn btn-primary">Vota</a>
+							    <a href="voto.jsp?nome=<%= cantanti.get(i).getNome() %>&indice=<%=i %>" class="btn btn-primary"><%= lingua.get(chiave) %></a>
   							</div>
 						</div>
 					</div>
@@ -66,7 +85,7 @@
 							    	<div class="col"><h6 class="card-text" style="color: red"><%= cantanti.get(j).getNegativi() %></h6></div>
 							    </div>
 							    <br>
-							    <a href="voto.jsp?nome=<%= cantanti.get(j).getNome() %>&indice=<%=j %>" class="btn btn-primary">Vota</a>
+							    <a href="voto.jsp?nome=<%= cantanti.get(j).getNome() %>&indice=<%=j %>" class="btn btn-primary"><%= lingua.get(chiave) %></a>
   							</div>
 						</div>
 					</div>
@@ -89,7 +108,7 @@
 							    	<div class="col"><h6 class="card-text" style="color: red"><%= cantanti.get(i).getNegativi() %></h6></div>
 							    </div>
 							    <br>
-							    <a href="voto.jsp?nome=<%= cantanti.get(i).getNome() %>&indice=<%=i %>" class="btn btn-primary">Vota</a>
+							    <a href="voto.jsp?nome=<%= cantanti.get(i).getNome() %>&indice=<%=i %>" class="btn btn-primary"><%= lingua.get(chiave) %></a>
   							</div>
 						</div>
 					</div>
@@ -104,7 +123,7 @@
 							    	<div class="col"><h6 class="card-text" style="color: red"><%= cantanti.get(j).getNegativi() %></h6></div>
 							    </div>
 							    <br>
-							    <a href="voto.jsp?nome=<%= cantanti.get(j).getNome() %>&indice=<%=j %>" class="btn btn-primary">Vota</a>
+							    <a href="voto.jsp?nome=<%= cantanti.get(j).getNome() %>&indice=<%=j %>" class="btn btn-primary"><%= lingua.get(chiave) %></a>
   							</div>
 						</div>
 					</div>

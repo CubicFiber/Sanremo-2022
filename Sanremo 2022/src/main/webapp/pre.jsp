@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ page import="java.util.ArrayList" %>
+<%@ page import="java.util.Locale" %>
+<%@ page import="java.util.HashMap" %>
 <%@ page import="Cantanti.Singer" %>
 <!DOCTYPE html>
 <html>
@@ -10,6 +12,11 @@
 	<body>
 	
 		<%
+		
+			Locale locale = request.getLocale(); //istanza oggetto
+			String language = locale.getLanguage(); //chiamo metodo lingua
+			String country = locale.getCountry(); //chiamo metodo paese
+		
 			Singer achillelauro = new Singer("img/achille_lauro.jfif", "Achille Lauro", 0, 0);
 			Singer akaseven = new Singer("img/aka_seven.jfif", "Aka Seven", 0, 0);
 			Singer anamena = new Singer("img/ana_mena.jfif", "Ana Mena", 0, 0);
@@ -59,6 +66,8 @@
 			cantanti.add(sangiovanni);
 			
 			session.setAttribute("cantanti", cantanti);
+			session.setAttribute("language", language);
+			session.setAttribute("country", country);
 			
 			response.sendRedirect("index.jsp");
 			
