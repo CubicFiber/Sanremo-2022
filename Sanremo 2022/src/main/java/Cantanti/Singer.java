@@ -1,5 +1,4 @@
 package Cantanti;
-import java.util.ArrayList;
 
 public class Singer {
 
@@ -7,13 +6,15 @@ public class Singer {
 	String Nome;
 	int Positivi;
 	int Negativi;
+	String UltimoVoto;
 	
-	public Singer(String Img, String Nome, int Positivi, int Negativi) {
+	public Singer(String Img, String Nome, int Positivi, int Negativi, String UltimoVoto) {
 		super();
 		this.Img = Img;
 		this.Nome = Nome;
 		this.Positivi = Positivi;
 		this.Negativi = Negativi;
+		this.UltimoVoto = UltimoVoto;
 	}
 
 	public String getImg() {
@@ -46,6 +47,14 @@ public class Singer {
 
 	public void setNegativi(int Negativi) {
 		this.Negativi = Negativi;
+	}
+
+	public String getUltimoVoto() {
+		return UltimoVoto;
+	}
+
+	public void setUltimoVoto(String ultimoVoto) {
+		UltimoVoto = ultimoVoto;
 	}
 	
 }

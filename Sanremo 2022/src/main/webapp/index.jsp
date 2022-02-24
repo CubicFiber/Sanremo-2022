@@ -25,6 +25,10 @@
 				text-align:center;
 				font-size:100px;
 			}
+			.distance{
+				margin-top: 15px;
+				margin-bottom: 15px;
+			}
 		</style>
 		
 		
@@ -65,11 +69,19 @@
 						  	<img src="<%= cantanti.get(i).getImg() %>" class="card-img-top">
 						  	<div class="card-body">
 							    <h5 class="card-title"><%= cantanti.get(i).getNome() %></h5>
-							    <div class="row">
+							    <div class="row distance">
 							    	<div class="col"><h6 class="card-text" style="color: green"><%= cantanti.get(i).getPositivi() %></h6></div>
 							    	<div class="col"><h6 class="card-text" style="color: red"><%= cantanti.get(i).getNegativi() %></h6></div>
 							    </div>
-							    <br>
+							    <%
+							    	String temp = String.valueOf(cantanti.get(i).getUltimoVoto());
+							    
+								    if(temp.equals("")){
+							    		
+							    	} else {
+							    		out.print("<div class=\"row distance\"><div class=\"col\"><h6 class=\"card-text\" style=\"color: gray\">" + temp + "</h6></div></div>");
+							    	}
+							    %>
 							    <a href="voto.jsp?nome=<%= cantanti.get(i).getNome() %>&indice=<%=i %>" class="btn btn-primary"><%= lingua.get(chiave) %></a>
   							</div>
 						</div>
@@ -80,11 +92,19 @@
 						  	<img src="<%= cantanti.get(j).getImg()%>" class="card-img-top">
 						  	<div class="card-body">
 							    <h5 class="card-title"><%= cantanti.get(j).getNome() %></h5>
-							    <div class="row">
+							    <div class="row distance">
 							    	<div class="col"><h6 class="card-text" style="color: green"><%= cantanti.get(j).getPositivi() %></h6></div>
 							    	<div class="col"><h6 class="card-text" style="color: red"><%= cantanti.get(j).getNegativi() %></h6></div>
 							    </div>
-							    <br>
+							    <%
+							    	temp = String.valueOf(cantanti.get(j).getUltimoVoto());
+							    
+								    if(temp.equals("")){
+							    		
+							    	} else {
+							    		out.print("<div class=\"row distance\"><div class=\"col\"><h6 class=\"card-text\" style=\"color: gray\">" + temp + "</h6></div></div>");
+							    	}
+							    %>
 							    <a href="voto.jsp?nome=<%= cantanti.get(j).getNome() %>&indice=<%=j %>" class="btn btn-primary"><%= lingua.get(chiave) %></a>
   							</div>
 						</div>
@@ -103,11 +123,19 @@
 						  	<img src="<%= cantanti.get(i).getImg()%>" class="card-img-top">
 						  	<div class="card-body">
 							    <h5 class="card-title"><%= cantanti.get(i).getNome() %></h5>
-							    <div class="row">
+							    <div class="row distance">
 							    	<div class="col"><h6 class="card-text" style="color: green"><%= cantanti.get(i).getPositivi() %></h6></div>
 							    	<div class="col"><h6 class="card-text" style="color: red"><%= cantanti.get(i).getNegativi() %></h6></div>
 							    </div>
-							    <br>
+							    <%
+							    	String temp = String.valueOf(cantanti.get(i).getUltimoVoto());
+							    
+								    if(temp.equals("")){
+							    		
+							    	} else {
+							    		out.print("<div class=\"row distance\"><div class=\"col\"><h6 class=\"card-text\" style=\"color: gray\">" + temp + "</h6></div></div>");
+							    	}
+							    %>
 							    <a href="voto.jsp?nome=<%= cantanti.get(i).getNome() %>&indice=<%=i %>" class="btn btn-primary"><%= lingua.get(chiave) %></a>
   							</div>
 						</div>
@@ -118,11 +146,19 @@
 						  	<img src="<%= cantanti.get(j).getImg()%>" class="card-img-top">
 						  	<div class="card-body">
 							    <h5 class="card-title"><%= cantanti.get(j).getNome() %></h5>
-							    <div class="row">
+							    <div class="row distance">
 							    	<div class="col"><h6 class="card-text" style="color: green"><%= cantanti.get(j).getPositivi() %></h6></div>
 							    	<div class="col"><h6 class="card-text" style="color: red"><%= cantanti.get(j).getNegativi() %></h6></div>
 							    </div>
-							    <br>
+							    <%
+							    	temp = String.valueOf(cantanti.get(j).getUltimoVoto());
+							    
+							    	if(temp.equals("")){
+							    		
+							    	} else {
+							    		out.print("<div class=\"row distance\"><div class=\"col\"><h6 class=\"card-text\" style=\"color: gray\">" + temp + "</h6></div></div>");
+							    	}
+							    %>
 							    <a href="voto.jsp?nome=<%= cantanti.get(j).getNome() %>&indice=<%=j %>" class="btn btn-primary"><%= lingua.get(chiave) %></a>
   							</div>
 						</div>

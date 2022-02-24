@@ -24,7 +24,6 @@
 		
 			ArrayList<Singer> cantanti = (ArrayList<Singer>)session.getAttribute("cantanti");
 			int i = Integer.valueOf(request.getParameter("indice")).intValue();
-			session.setAttribute("token", "true");
 		
 		%>
 	</head>
